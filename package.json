@@ -1,15 +1,43 @@
 {
-  "name": "hello-badminton",
-  "version": "1.0.0",
+  "name": "tiny-h5-game-engine",
+  "version": "0.0.1",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf ./dist && rollup -c",
+    "dev": " rm -rf ./dist && rollup -c -w"
   },
-  "keywords": [],
+  "main": "dist/engine.js",
+  "module": "dist/engine.es.js",
+  "umd": "dist/engine.umd.js",
+  "keywords": [
+    "game engine",
+    "tiny engine",
+    "tiny html game engine",
+    "tiny h5 game engine",
+    "tiny js game engine",
+    "engine"
+  ],
   "author": "vzhufeng",
   "license": "MIT",
   "dependencies": {
     "matter-js": "^0.14.2"
-  }
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.5",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-terser": "^5.1.1",
+    "rollup-plugin-url": "^1.4.0"
+  },
+  "files": [
+    "dist"
+  ]
 }
